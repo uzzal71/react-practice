@@ -1,7 +1,7 @@
 const Demo = () => {
     return (
         <div>
-            <h1>I am Demo functional</h1>
+            <h1>I am Demo functional component</h1>
         </div>
     );
 };
