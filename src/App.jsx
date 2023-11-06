@@ -1,9 +1,9 @@
-function App() {
-  const newLocal = <span>Hello React</span>
+const App = () => {
   return (
-      <div>
-        {newLocal}
+    <div>
+      
     </div>
-  )
-}
-export default App
+  );
+};
+
+export default App;
