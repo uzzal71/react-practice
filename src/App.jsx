@@ -6,12 +6,13 @@ const App = () => {
     if (status) return <button>Logout Btn</button>
     else return <button>Login Btn</button>
   }
+  
   return (
     <div>
-      <h1>Login status</h1>
-      {LoginStatusBtn(false)}
+      <h1>Login Status</h1>
+      {status && <button>Logout</button>}
     </div>
-  )
+  );
 };
 
 export default App;
