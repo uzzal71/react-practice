@@ -15,6 +15,15 @@ const App = () => {
         <h1>Avarage Result</h1>
       }
     </div>
+    <div>
+      {(() => {
+        if (marks > 80) {
+          return <h1>Result: Brilliant</h1>
+        } else {
+          return <h1>Result: Avarage</h1>
+        }
+      })()}
+    </div>
       <Header/>
       <Hero/>
       <ContactForm/>
