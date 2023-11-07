@@ -5,6 +5,7 @@ import Hero from "./component/Hero";
 
 const App = () => {
   let marks=80;
+  let cities=['Dhaka','London','Delhi','Kolkata'];
   return (
     <div>
     <div>
@@ -23,6 +24,15 @@ const App = () => {
           return <h1>Result: Avarage</h1>
         }
       })()}
+    </div>
+    <div>
+      <ol>
+        {
+          cities.map((city, i) => {
+            return <li key={i.toString()}>{city}</li>
+          })
+        }
+      </ol>
     </div>
       <Header/>
       <Hero/>
