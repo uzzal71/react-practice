@@ -1,35 +1,15 @@
-import Hero from "./component/Hero";
-import MyButton from "./component/MyButton";
-import ProductList from "./component/ProductList";
+import { useRef } from "react";
 
 const App = () => { 
-  const ItemObj= {
-    id: 1,
-    name: "Product 1",
-    description: "This is the description",
-    price: 19.99,
-    category: "Category 1"
+  const myUseRef = useRef();
+  const change = () => {
+    myUseRef.current.innerHTML="<ul><li>A</li><li>B</li></ul>";
   }
-  const handleClick = () => {
-    alert("Button clicked!");
-  }
-  const Demo = () => {
-    alert("Submit clicked!");
-  }
-  const SubmitForm = (e) => {
-    e.preventDefault();
-    alert("You clicked me!");
-  }
+  
   return (
     <div>
-      <Hero title="Learn react" description="In details how to pass props"/>
-      <ProductList Item={ItemObj}/>
-      <MyButton handleClick={handleClick}/>
-      <button onClick={Demo}>Submit</button>
-      <form onSubmit={SubmitForm}>
-        <input placeholder="name"/>
-        <button>Send</button>
-      </form>
+      <h1 ref={myUseRef}></h1>
+      <button onClick={change}>Click</button>
     </div>
   );
 };
