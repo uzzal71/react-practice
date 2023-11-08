@@ -27,7 +27,7 @@ const App = () => {
       <MyButton handleClick={handleClick}/>
       <button onClick={Demo}>Submit</button>
       <form onSubmit={SubmitForm}>
-        <input/>
+        <input placeholder="name"/>
         <button>Send</button>
       </form>
     </div>
