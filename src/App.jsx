@@ -1,14 +1,14 @@
 import { useRef } from "react";
 
 const App = () => { 
-  const myUseRef = useRef();
+  let myUseRef = useRef();
   const change = () => {
-    myUseRef.current.innerHTML="<ul><li>A</li><li>B</li></ul>";
+    myUseRef.innerHTML="<ul><li>A</li><li>B</li></ul>";
   }
   
   return (
     <div>
-      <h1 ref={myUseRef}></h1>
+      <h1 ref={(h1)=>myUseRef=h1}></h1>
       <button onClick={change}>Click</button>
     </div>
   );
