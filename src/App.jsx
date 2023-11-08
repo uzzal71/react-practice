@@ -1,15 +1,18 @@
 import { useRef } from "react";
 
 const App = () => { 
-  let myUseRef = useRef();
+  let demoRef = useRef();
   const change = () => {
-    myUseRef.innerHTML="<ul><li>A</li><li>B</li></ul>";
+    demoRef.current.src="https://placehold.co/400"
+    demoRef.current.setAttribute("height", "200px");
+    demoRef.current.setAttribute("width", "200px");
   }
   
   return (
     <div>
-      <h1 ref={(h1)=>myUseRef=h1}></h1>
-      <button onClick={change}>Click</button>
+      <img src="https://placehold.co/600x400" ref={demoRef}/>
+      <br/>
+      <button onClick={()=>change()}>Click</button>
     </div>
   );
 };
