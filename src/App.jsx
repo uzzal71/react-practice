@@ -16,7 +16,7 @@ const App = () => {
   const Demo = () => {
     alert("Submit clicked!");
   }
-  function SubmitForm(e) {
+  const SubmitForm = (e) => {
     e.preventDefault();
     alert("You clicked me!");
   }
