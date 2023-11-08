@@ -13,11 +13,23 @@ const App = () => {
   const handleClick = () => {
     alert("Button clicked!");
   }
+  const Demo = () => {
+    alert("Submit clicked!");
+  }
+  function SubmitForm(e) {
+    e.preventDefault();
+    alert("You clicked me!");
+  }
   return (
     <div>
       <Hero title="Learn react" description="In details how to pass props"/>
       <ProductList Item={ItemObj}/>
       <MyButton handleClick={handleClick}/>
+      <button onClick={Demo}>Submit</button>
+      <form onSubmit={SubmitForm}>
+        <input/>
+        <button>Send</button>
+      </form>
     </div>
   );
 };
