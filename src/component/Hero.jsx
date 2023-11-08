@@ -1,7 +1,8 @@
 const Hero = (props) => {
     return (
         <div>
-            <img src="https://rabbil.com/files/rabbilVai.png"/>
+            <h1>{props.title}</h1>
+            <p>{props.description}</p>
         </div>
     );
 };
