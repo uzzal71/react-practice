@@ -1,16 +1,24 @@
 import { useRef } from "react";
 
 const App = () => { 
-  let demoRef = useRef(0);
-  const change = () => {
-    demoRef.current++;
-    console.log(`Clicked ${demoRef.current} times`);
+  let expensiveResultRef = useRef(null);
+  let myDivRef = useRef(null);
+
+  const fetchData = async () => {
+    let response = await fetch('https://dummyjson.com/products');
+    expensiveResultRef.current = await response.json();
   }
+
+  const ShowData = () => {
+    myDivRef.current.innerHTML = JSON.stringfy(expensiveResultRef.current);
+  }
+  
   
   return (
     <div>
-      <h1></h1>
-      <button onClick={()=>change()}>Click</button>
+      <div ref={myDivRef}></div>
+      <button onClick={ShowData}>Call Api</button>
+      <button onClick={fetchData}>Show Div</button>
     </div>
   );
 };
