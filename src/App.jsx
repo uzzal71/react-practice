@@ -1,13 +1,19 @@
 import { useState } from "react";
 
 const App = () => { 
-  let [number, setNumber] = useState(0);
+  let [product, setProduct] = useState({
+    name: "Comfortable Business Wedding Office Men Genuine Leather dress shoes Derby Shoes",
+    price: 488.00,
+    discount: 10,
+    discount_type: "percent",
+    reviews:192,
+    rating: 4.92,
+    stock: 100
+  });
   
   return (
     <div>
-      <h1>Number: {number}</h1>
-      <button onClick={()=>setNumber(number+1)}>Increment</button>
-      <button onClick={()=>setNumber(number-1)}>Decrement</button>
+      <h3>{product.name}</h3>
     </div>
   );
 };
