@@ -8,12 +8,20 @@ const App = () => {
     discount_type: "percent",
     reviews:192,
     rating: 4.92,
-    stock: 100
+    stock: 0
   });
+
+  const updateProduct = () => {
+    setProduct(prevProduct=>({
+      ...prevProduct,
+      stock: 100
+    }));
+  }
   
   return (
     <div>
-      <h3>{product.name}</h3>
+      <h3>{product.stock}</h3>
+      <button onClick={updateProduct}>update product</button>
     </div>
   );
 };
