@@ -1,24 +1,13 @@
-import { useRef } from "react";
+import { useState } from "react";
 
 const App = () => { 
-  let expensiveResultRef = useRef(null);
-  let myDivRef = useRef();
-
-  const fetchData = async () => {
-    let response = await fetch("https://dummyjson.com/products");
-    expensiveResultRef.current = await response.json();
-  }
-
-  const ShowData = () => {
-    myDivRef.current.innerHTML = JSON.stringify(expensiveResultRef.current);
-  }
-  
+  let [number, setNumber] = useState(0);
   
   return (
     <div>
-      <div ref={myDivRef}></div>
-      <button onClick={fetchData}>Call Api</button>
-      <button onClick={ShowData}>Show Data</button>
+      <h1>Number: {number}</h1>
+      <button onClick={()=>setNumber(number+1)}>Increment</button>
+      <button onClick={()=>setNumber(number-1)}>Decrement</button>
     </div>
   );
 };
