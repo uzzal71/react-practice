@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 
 const App = () => {
-  let [Data, SetData]=useState([]);
+  let [data, setData]=useState([]);
 
   useEffect(()=>{
-    fetch('https://dummyjson.com/products/1')
-      .then(res=>res.json())
-      .then(json=>SetData(json));
-  },[1]);
+    (async () => {
+      const response = await fetch('https://dummyjson.com/products/1');
+      let result = response.json();
+      setData(result);
+    })
+  },[]);
   
   return (
     <div className="container">
-      {JSON.stringify(Data)}
+      {JSON.stringify(data)}
     </div>
   );
 };
