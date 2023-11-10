@@ -17,8 +17,12 @@ const App = () => {
 
   return (
     <div>
-      
-      <button>Add</button>
+      <form onSubmit={FormSubmit}>
+        <input placeholder="First name" value={FormValue.fname} onChange={(e)=>InputOnChange('fname',e.target.value)}/>
+        <input placeholder="Last name" value={FormValue.lname} onChange={(e)=>InputOnChange('lname',e.target.value)}/>
+        <br/>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 };
