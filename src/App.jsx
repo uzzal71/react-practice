@@ -4,12 +4,14 @@ const App = () => {
   let [FormValue, SetFormValue]=useState({
     fname:"",lname:"",city:"",gender:""
   });
+
   const InputOnChange=(InputName,InputValue)=>{
     SetFormValue(FormValue=>({
       ...FormValue,
       [InputName]:InputValue
     }));
   }
+  
   const FormSubmit=(e)=>{
     e.preventDefault();
     alert(JSON.stringify(FormValue));
