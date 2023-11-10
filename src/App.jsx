@@ -6,9 +6,9 @@ const App = () => {
   useEffect(()=>{
     (async () => {
       const response = await fetch('https://dummyjson.com/products/1');
-      let result = response.json();
+      let result = await response.json();
       setData(result);
-    })
+    })()
   },[]);
   
   return (
