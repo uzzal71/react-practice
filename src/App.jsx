@@ -1,13 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const App = () => {
+  let [Data, SetData]=useState([]);
+
   useEffect(()=>{
-    console.log("Hello world!")
-  },[]);
+    fetch('https://dummyjson.com/products/1')
+      .then(res=>res.json())
+      .then(json=>SetData(json));
+  },[1]);
   
   return (
     <div className="container">
-      
+      {JSON.stringify(Data)}
     </div>
   );
 };
