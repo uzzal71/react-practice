@@ -1,7 +1,41 @@
-.footer {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+body {
+  font-family: poppins;
+  margin: 0;
+  display: grid;
+  font-size: 14px;
+}
+.footer {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: row wrap;
+  padding: 50px;
+  color: #fff;
+  background-color: #25242a;
+}
+.footer > * {
+  flex: 1 100%;
+}
 .left-area {
+  margin-right: -12em;
+}
+.footer-bottom img {
+  width: 15%;
+}
+h2 {
+  font-size: 17em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: darkorange;
+  letter-spacing: 3px;
 }
 
 .box {
@@ -26,7 +60,4 @@
 }
 
 .socials {
-}
-
-.footer-bottom {
 }
