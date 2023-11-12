@@ -1,11 +1,16 @@
 const Header = () => {
     return (
-        <div>
+        <div style={{ display: "flex" }}>
+            <div>
+                <a href="#">Logo</a>
+            </div>
+            <div>
             <ul>
                 <li>Home</li>
                 <li>Contact</li>
                 <li>Others</li>
             </ul>
+            </div>
         </div>
     );
 };
