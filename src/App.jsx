@@ -4,7 +4,7 @@ const App = () => {
   let myHeadLine = useRef();
 
   const change = () => {
-    myHeadLine.current.innerText="Hello world";
+    myHeadLine.current.innerHTML="<ul><li>A</li><li>B</li></ul>";
   }
   
   return (
