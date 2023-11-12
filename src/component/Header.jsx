@@ -5,7 +5,7 @@ const Header = () => {
                 <a href="#">Logo</a>
             </div>
             <div>
-            <ul>
+            <ul style={{ display: "flex" }}>
                 <li>Home</li>
                 <li>Contact</li>
                 <li>Others</li>
