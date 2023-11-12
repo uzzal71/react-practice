@@ -1,11 +1,11 @@
 import { useRef } from "react";
 
 const App = () => {
-  let counter = useRef(0);
+  let myHeadLine = useRef();
   
   return (
     <div>
-      <h1>Counter: {counter.current}</h1>
+      <h1 id="myHeadList"></h1>
     </div>
   );
 };
