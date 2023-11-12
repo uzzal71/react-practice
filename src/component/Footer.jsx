@@ -45,8 +45,21 @@ const Footer = () => {
                             <button className="btn" type="submit">Search</button>
                         </div>
                     </form>
+
+                    <div className="socials">
+                        <a href="#"><i className="fa fa-facebook"></i></a>
+                        <a href="#"><i className="fa fa-twitter"></i></a>
+                        <a href="#"><i className="fa fa-dribbble"></i></a>
+                        <a href="#"><i className="fa fa-youtube"></i></a>
+                        <a href="#"><i className="fa fa-tumblr"></i></a>
+                    </div>
                 </li>
            </ul>
+
+           <div className="footer-bottom">
+            <img src="logo,ong" alt=""/>
+            <p>All Right reserved</p>
+           </div>
         </footer>
     );
 };
