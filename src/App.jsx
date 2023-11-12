@@ -2,10 +2,15 @@ import { useRef } from "react";
 
 const App = () => {
   let myHeadLine = useRef();
+
+  const change = () => {
+    myHeadLine.current.innerText="Hello world";
+  }
   
   return (
     <div>
-      <h1 id="myHeadList"></h1>
+      <h1 ref={myHeadLine}></h1>
+      <button onClick={change}>Click</button>
     </div>
   );
 };
