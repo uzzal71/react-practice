@@ -1,4 +1,4 @@
-import Quote from "./component/fetch/Quote";
+import Quote from "./component/axios/Quote";
 
 const App = () => {
 
