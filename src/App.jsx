@@ -1,11 +1,9 @@
-import Footer from "./component/Footer";
-
 const App = () => {
 
   
   return (
     <div>
-      <Footer/>
+      <h1>API Call</h1>
     </div>
   );
 };
