@@ -1,4 +1,4 @@
-import Quote from "./component/fetch/Quote";
+import QuoteFetch from "./component/fetch/QuoteFetch";
 
 const App = () => {
 
@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div>
       <h1>API Call</h1>
-      <Quote/>
+      <QuoteFetch/>
     </div>
   );
 };
