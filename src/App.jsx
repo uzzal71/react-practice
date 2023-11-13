@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import Quote from "./component/swr/Quote";
+import Quote from "./component/query/Quote";
 
 const App = () => {
 
