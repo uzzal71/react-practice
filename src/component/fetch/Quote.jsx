@@ -14,7 +14,7 @@ const Quote = () => {
 
     return (
         <div>
-            <h1>Get quotes using fetch API</h1>
+            <h1>Fetch API Call</h1>
             <div>{quote?.content}</div>
         </div>
     );

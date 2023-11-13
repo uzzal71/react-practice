@@ -12,7 +12,7 @@ const QuoteAxios = () => {
     }, [])
     return (
         <div>
-            <h1>Axios api call</h1>
+            <h1>Axios Api Call</h1>
             <div>{quote?.content}</div>
         </div>
     );
