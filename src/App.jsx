@@ -13,7 +13,7 @@ const App = () => {
   
   return (
     <div>
-      <h1>API Call</h1>
+      <h1>API Calling</h1>
       <QueryClientProvider client={client}>
         <Suspense fallback={<h1>Loading...</h1>}>
           <Quote />
